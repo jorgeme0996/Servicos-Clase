@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Consulta tu CP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit)="enviarForm(formulario)">
+    <ion-list>
+      <ion-item>
+        <ion-label>Ingresa tu CP</ion-label>
+        <ion-input type="number" name="cp" ngModel required></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit">
+      Enviar Form
+    </ion-button>
+  </form>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>CP: {{respuestaCP.codigo_postal}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Estado: {{respuestaCP.estado}}</p>
+      <p>Municipio: {{respuestaCP.estado}}</p>
+      <p>Colonias:</p>
+      <ul>
+        <li *ngFor="let colonia of respuestaCP.colonias">{{colonia}}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

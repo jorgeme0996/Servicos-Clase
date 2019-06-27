@@ -14,4 +14,7 @@ export class HomePage {
     this.router.navigate(['/consulta'])
   }
 
+  consultarPokemon() {
+    this.router.navigate(['/ngfor'])
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CpService } from '../servicios/cp.service';
+import { CpService } from '../../servicios/cp.service';
 
 @Component({
   selector: 'app-consulta',
